@@ -80,10 +80,10 @@ except ImportError:
 
 ################################################
 # SET YOUR TWITTER KEYS/SECRETS
-e["consumer_key"]="XBOMTUDVy5b0zOdWqRWYJuGkw"
-e['consumer_secret']="oYK2W4jiARg3NQSFBklWwXgg9vhz1raviEd6OiFsZ7UsAAia17"
-e["access_token_key"]="2572669031-n1HzM9bPb00wp4ZSuHWBsd7Wn9AEEShg2Z5z8eg"
-e['access_token_secret']="J40ArmKsrPj4w5xgst4pq32ycOECM2cNy2OQ1Fd9I4zKI"
+e["consumer_key"]="2nfUSbc9DwMjZ46x6QpiirZ4y"
+e['consumer_secret']="jWCFVENF8k5TSP7wAKv7AYnGnGUZKwO4EWRX8FvnoXyzhmgMGu"
+e["access_token_key"]="2572669031-VBa6Zl6TIW3AEgSvwnX6VsOP6cbwOvB4JmWnQVb"
+e['access_token_secret']="HplKckRXHEyQuwQdJhBTf0SGnux94utNsFEqCyYvBQZy1"
 # SET TIMEZONE FOR OUTPUT
 local_timezone = 'Asia/Kolkata'
 ################################################
