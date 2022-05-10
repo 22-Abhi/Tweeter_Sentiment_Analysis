@@ -54,7 +54,7 @@ def runHashTagScrap(debug_mode):
         elif Analysis == 'Tweet Text Analysis':
             drawings.drawWordsPerTweet(cleanData)
             drawings.drawWordCloud(cleanData)
-            drawings.drawMostRetweeted(10,data)
+#             drawings.drawMostRetweeted(10,data)
             
         elif Analysis == 'Sentiment Analysis':
             drawings.drawSentiments(sentiments)
