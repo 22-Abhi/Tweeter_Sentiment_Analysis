@@ -143,6 +143,6 @@ def getReplies():
 
         elif rplyAnalysis == 'Overall Sentiment of user':
             drawings.drawUserSentiments(usrSentiments)
-            drawings.drawUserWordCloud(rplyData, 'Reply')
+#             drawings.drawUserWordCloud(rplyData, 'Reply')
     else:
         pass
