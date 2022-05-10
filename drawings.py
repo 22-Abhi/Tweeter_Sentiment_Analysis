@@ -28,8 +28,8 @@ def drawWordsPerTweet(cleanData):
     plt.title('WORDS PER TWEET')
     st.pyplot(fig0)
 
-def drawMostRetweeted(mst,data):
-    general.mostRetweeted(mst,data)
+# def drawMostRetweeted(mst,data):
+#     general.mostRetweeted(mst,data)
 
 def drawSentiments(sentiments):
     fig3, axes = plt.subplots()
