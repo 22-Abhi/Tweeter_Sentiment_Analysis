@@ -99,18 +99,17 @@ def getUserInfo():
     else:pass
         
 def getReplies():
-
     st.title('Twitter Sentiment Analysis')
 
     st.write('Scrap replies of specific tweet.')
     st.write('Enter URL of the Tweet.')
-    
+
     URL = st.text_input("Enter URL: ")
 
     if URL:
-        with open (p.URL_path, "r") as myfile:
+        with open(p.URL_path, "r") as myfile:
             dta = myfile.read()
-        
+
         if dta != URL:
 
             dlg = st.text('Getting Tweet Replies')
@@ -119,7 +118,7 @@ def getReplies():
             url.write(URL)
             url.close()
 
-            cmd=f'python3 {p.rply_scrap_file} -f url.txt'
+            cmd = f'python3 {p.rply_scrap_file} -f url.txt'
 
             os.system(cmd)
 
@@ -129,12 +128,13 @@ def getReplies():
 
         else:
             rplyData = pd.read_csv(p.rply_path)
-            
+
         rplyAnalysis = st.selectbox('Select Analytics',
-            ['Show Raw Data','Overall Sentiment of user'])  
+                                    ['Show Raw Data', 'Overall Sentiment of user'])
 
         try:
-            usrSentiments = pd.DataFrame(data = general.getSentiment(rplyData['Reply']),columns = ['neg','neu','pos','comp'])
+            usrSentiments = pd.DataFrame(data=general.getSentiment(rplyData['Reply']),
+                                         columns=['neg', 'neu', 'pos', 'comp'])
         except:
             st.write('Unexpected Error Try Again...')
 
@@ -143,5 +143,6 @@ def getReplies():
 
         elif rplyAnalysis == 'Overall Sentiment of user':
             drawings.drawUserSentiments(usrSentiments)
-            drawings.drawUserWordCloud(rplyData,'reply')
-    else:pass
+            drawings.drawUserWordCloud(rplyData, 'Reply')
+    else:
+        pass
