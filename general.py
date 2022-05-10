@@ -112,25 +112,25 @@ def showWordCloud(twit,sentiment):
   plt.title(f'TOP WORDS IN TOP {sentiment} TWEETS',fontsize='xx-large')
   st.pyplot(plt)
 
-# @st.cache(suppress_st_warning=True)
-def mostRetweeted(nTweets,data):
-  d = data.sort_values(by='retweetcount',ascending=False)
-  retw_c = []; retw = []; u = []
-  for ret,tex,user in zip(d['retweetcount'].values,d['text'].values,d['username']):
-    if ret not in retw_c and tex not in retw:
-      retw_c.append(ret)
-      retw.append(tex)
-      u.append(user)
-    if len(retw) > nTweets:
-      break
-  st.write(f'## Most Retweeted {nTweets} Tweets :')
-  for i in range(nTweets):
-    st.markdown(f'Tweet of **{u[i]}** Retweeted **{retw_c[i]}** times.')
-    st.markdown("""
-      <style>
-      .inherit {
-          font-size:17px !important;
-      }
-      </style>
-      """, unsafe_allow_html=True)
-    st.markdown(f'<p class="big-font">{retw[i]}!</p>', unsafe_allow_html=True)
+# # @st.cache(suppress_st_warning=True)
+# def mostRetweeted(nTweets,data):
+#   d = data.sort_values(by='retweetcount',ascending=False)
+#   retw_c = []; retw = []; u = []
+#   for ret,tex,user in zip(d['retweetcount'].values,d['text'].values,d['username']):
+#     if ret not in retw_c and tex not in retw:
+#       retw_c.append(ret)
+#       retw.append(tex)
+#       u.append(user)
+#     if len(retw) > nTweets:
+#       break
+#   st.write(f'## Most Retweeted {nTweets} Tweets :')
+#   for i in range(nTweets):
+#     st.markdown(f'Tweet of **{u[i]}** Retweeted **{retw_c[i]}** times.')
+#     st.markdown("""
+#       <style>
+#       .inherit {
+#           font-size:17px !important;
+#       }
+#       </style>
+#       """, unsafe_allow_html=True)
+#     st.markdown(f'<p class="big-font">{retw[i]}!</p>', unsafe_allow_html=True)
